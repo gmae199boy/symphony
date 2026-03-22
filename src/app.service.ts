@@ -6,4 +6,9 @@ export class AppService {
   getHello(): string {
     return 'Hello World!';
   }
+
+  // 헬스체크 상태 반환
+  getHealth(): { status: string; result: boolean } {
+    return { status: 'ok', result: true };
+  }
 }

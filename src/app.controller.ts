@@ -10,4 +10,10 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  // GET /health — 헬스체크 엔드포인트
+  @Get('health')
+  getHealth(): { status: string; result: boolean } {
+    return this.appService.getHealth();
+  }
 }
